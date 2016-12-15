@@ -10,6 +10,14 @@ Commit and tag a release for a conventional changelog project.
 npm i -g commit-release
 ```
 
+or
+
+```shell
+npm i --save-dev commit-release
+```
+
+(depending on your preferences)
+
 ## Usage
 
 ```shell
@@ -20,9 +28,10 @@ $ commit-release --help
   Options:
 
     -h, --help                output usage information
+    -b, --bump                use "conventional-recommended-bump"
     -f, --force               overwrite tag if it exists already
     -n, --no-verify           skip git commit hooks
     -o, --override [version]  override recommended version number
     -p, --postfix [name]      a postfix such as "rc1", "canary" or "beta1"
-    -t, --no-tag'             skip tagging the commit
+    -t, --no-tag              skip tagging the commit
 ```
