@@ -1,5 +1,7 @@
 # commit-release
 
+[![Analytics](https://ga-beacon.appspot.com/UA-45466560-5/commit-release?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
+
 Commit and tag a release for a conventional changelog project.
 
 ## Install
@@ -7,6 +9,14 @@ Commit and tag a release for a conventional changelog project.
 ```shell
 npm i -g commit-release
 ```
+
+or
+
+```shell
+npm i --save-dev commit-release
+```
+
+(depending on your preferences)
 
 ## Usage
 
@@ -18,8 +28,10 @@ $ commit-release --help
   Options:
 
     -h, --help                output usage information
+    -b, --bump                use "conventional-recommended-bump"
     -f, --force               overwrite tag if it exists already
     -n, --no-verify           skip git commit hooks
     -o, --override [version]  override recommended version number
     -p, --postfix [name]      a postfix such as "rc1", "canary" or "beta1"
+    -t, --no-tag              skip tagging the commit
 ```
