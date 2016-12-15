@@ -9,6 +9,7 @@ var commitRelease = require('./src/commit-release');
 
 // implementation
 program
+  .option('-b, --bump', 'use "conventional-recommended-bump"')
   .option('-f, --force', 'overwrite tag if it exists already')
   .option('-n, --no-verify', 'skip git commit hooks')
   .option('-o, --override [version]', 'override recommended version number', '')
@@ -18,6 +19,7 @@ program
 
 commitRelease({
   directory: process.cwd(),
+  bump: program.bump,
   force: program.force,
   noTag: !program.tag,
   noVerify: !program.verify,
@@ -30,5 +32,8 @@ function onComplete(err, options) {
     console.error(chalk.red(err.stack ? err.stack : err));
     process.exit(1);
   }
-  console.log(chalk.green('Release ' + options.version + ' committed and tagged, changelog updated.'));
+  console.log(chalk.green(
+    'Release ' + options.version + ' committed' +
+    (!options.noTag ? ' and tagged' : '') +
+    ', changelog updated.'));
 }
