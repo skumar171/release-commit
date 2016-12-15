@@ -1,5 +1,21 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/JamieMason/commit-release/compare/0.6.2...v0.7.0) (2016-12-15)
+
+
+### Bug Fixes
+
+* **shell:** use fs and child process safely ([21f833b](https://github.com/JamieMason/commit-release/commit/21f833b)), closes [#5](https://github.com/JamieMason/commit-release/issues/5)
+
+
+### Features
+
+* **options:** add --bump option ([56b3c80](https://github.com/JamieMason/commit-release/commit/56b3c80))
+* **options:** add --no-tag option ([d46aa6b](https://github.com/JamieMason/commit-release/commit/d46aa6b))
+
+
+
 <a name="0.6.2"></a>
-## [0.6.2](https://github.com/JamieMason/commit-release/compare/0.6.1...v0.6.2) (2016-07-26)
+## [0.6.2](https://github.com/JamieMason/commit-release/compare/0.6.1...0.6.2) (2016-07-26)
 
 
 ### Bug Fixes
@@ -25,6 +41,7 @@
 ### Bug Fixes
 
 * **shell:** use spawn instead of exec ([80f9d63](https://github.com/JamieMason/commit-release/commit/80f9d63)), closes [#1](https://github.com/JamieMason/commit-release/issues/1)
+
 
 ### Features
 
