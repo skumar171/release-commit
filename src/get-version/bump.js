@@ -43,7 +43,10 @@ function get(options, done) {
         v.patch = currentVersion.patch + 1;
     }
 
-    return [v.major, v.minor, v.patch].join('.') + postfix;
+    return {
+      number: [v.major, v.minor, v.patch].join('.') + postfix,
+      type: result.releaseType
+    };
   }
 
   function checkBump() {
@@ -63,7 +66,7 @@ function get(options, done) {
   function getCurrentVersion() {
     var levels = ['major', 'minor', 'patch', 'postfix'];
 
-    return require(options.directory + '/package.json')
+    return require(options.directory + '/package.json') // eslint-disable-line import/no-dynamic-require
       .version
       .split('.')
       .reduce(function (obj, num, i) {

@@ -1,9 +1,6 @@
 // 3rd party modules
 var when = require('when');
-var cr = {
-  v: require('conventional-recommended-version'),
-  b: require('./bump')
-};
+var bump = require('./bump');
 
 // public
 module.exports = getVersion;
@@ -15,13 +12,13 @@ function getVersion(options) {
     return when.resolve(options);
   }
   return when.promise(function (resolve, reject) {
-    var method = options.bump ? 'b' : 'v';
-
-    cr[method].get(options, function (err, version) {
+    bump.get(options, function (err, version) {
       if (err) {
         reject(err);
       } else {
-        options.version = version;
+        options.version = version.number;
+        options.type = version.type;
+
         resolve(options);
       }
     });
