@@ -6,7 +6,8 @@ module.exports = bump;
 
 // implementation
 function bump(options) {
-  return childProcess.exec('npm version ' + options.version + ' --no-git-tag-version --force')
+  return childProcess
+    .exec('npm version ' + options.version + ' --no-git-tag-version --force')
     .then(function () {
       return options;
     });

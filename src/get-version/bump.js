@@ -1,6 +1,7 @@
 // modules
 var bump = require('conventional-recommended-bump');
 var when = require('when');
+var getCurrentVersion = require('../lib/get-current-version');
 
 // public
 module.exports = {
@@ -8,8 +9,8 @@ module.exports = {
 };
 
 // implementation
-function get (options, done) {
-  var currentVersion = getCurrentVersion();
+function get(options, done) {
+  var currentVersion = getCurrentVersion(options.directory);
   var postfix = getPostfix();
 
   checkBump()
@@ -17,16 +18,16 @@ function get (options, done) {
     .then(onSuccess, onError)
     .catch(onError);
 
-  function onSuccess (version) {
+  function onSuccess(version) {
     done(null, version);
   }
 
-  function onError (message) {
+  function onError(message) {
     done(message);
   }
 
-  function bumpVersion (result) {
-    var v = { major: 0, minor: 0, patch: 0 };
+  function bumpVersion(result) {
+    var v = {major: 0, minor: 0, patch: 0};
 
     switch (result.releaseType) {
       case 'major':
@@ -43,10 +44,13 @@ function get (options, done) {
         v.patch = currentVersion.patch + 1;
     }
 
-    return [v.major, v.minor, v.patch].join('.') + postfix;
+    return {
+      number: [v.major, v.minor, v.patch].join('.') + postfix,
+      type: result.releaseType
+    };
   }
 
-  function checkBump () {
+  function checkBump() {
     return when.promise(function (resolve, reject) {
       bump({
         preset: 'angular'
@@ -60,26 +64,7 @@ function get (options, done) {
     });
   }
 
-  function getCurrentVersion () {
-    var levels = ['major', 'minor', 'patch', 'postfix'];
-
-    return require(options.directory + '/package.json')
-      .version
-      .split('.')
-      .reduce(function (obj, num, i) {
-        if (i === 2) {
-          num = num.split('-');
-          obj[levels[i + 1]] = num[1] || '';
-          num = num[0];
-        }
-
-        obj[levels[i]] = parseInt(num);
-
-        return obj;
-      }, {});
-  }
-
-  function getPostfix () {
+  function getPostfix() {
     return options.postfix ? '-' + options.postfix : '';
   }
 }

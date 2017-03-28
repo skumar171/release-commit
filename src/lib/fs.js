@@ -7,7 +7,10 @@ var rateLimit = require('./rate-limit');
 
 // public
 module.exports = {
+  createReadStream: fs.createReadStream,
   createWriteStream: fs.createWriteStream,
+  rename: fs.rename,
+  unlink: fs.unlink,
   writeFile: wrap(fs.writeFile)
 };
 
