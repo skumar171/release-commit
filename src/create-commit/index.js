@@ -1,7 +1,7 @@
 // modules
 var bump = require('./bump');
 var checkVersion = require('./check-version');
-var clearLog = require('./clear-log');
+// var clearLog = require('./clear-log');
 var commit = require('./commit');
 var stage = require('./stage');
 var tag = require('./tag');
@@ -15,7 +15,7 @@ module.exports = createCommit;
 function createCommit(options) {
   return checkVersion(options)
     .then(bump)
-    .then(clearLog)
+    // .then(clearLog)
     .then(updateChangeLog)
     .then(updateDependencyLog)
     .then(stage)
