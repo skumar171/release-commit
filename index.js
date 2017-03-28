@@ -9,7 +9,6 @@ var commitRelease = require('./src/commit-release');
 
 // implementation
 program
-  .option('-b, --bump', 'use "conventional-recommended-bump"')
   .option('-f, --force', 'overwrite tag if it exists already')
   .option('-n, --no-verify', 'skip git commit hooks')
   .option('-o, --override [version]', 'override recommended version number', '')
@@ -19,7 +18,6 @@ program
 
 commitRelease({
   directory: process.cwd(),
-  bump: program.bump,
   force: program.force,
   tag: program.tag,
   noVerify: !program.verify,
