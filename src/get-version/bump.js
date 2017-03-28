@@ -1,6 +1,7 @@
 // modules
 var bump = require('conventional-recommended-bump');
 var when = require('when');
+var getCurrentVersion = require('../lib/get-current-version');
 
 // public
 module.exports = {
@@ -9,7 +10,7 @@ module.exports = {
 
 // implementation
 function get(options, done) {
-  var currentVersion = getCurrentVersion();
+  var currentVersion = getCurrentVersion(options.directory);
   var postfix = getPostfix();
 
   checkBump()
@@ -61,25 +62,6 @@ function get(options, done) {
         }
       });
     });
-  }
-
-  function getCurrentVersion() {
-    var levels = ['major', 'minor', 'patch', 'postfix'];
-
-    return require(options.directory + '/package.json') // eslint-disable-line import/no-dynamic-require
-      .version
-      .split('.')
-      .reduce(function (obj, num, i) {
-        if (i === 2) {
-          num = num.split('-');
-          obj[levels[i + 1]] = num[1] || '';
-          num = num[0];
-        }
-
-        obj[levels[i]] = parseInt(num, 10);
-
-        return obj;
-      }, {});
   }
 
   function getPostfix() {
