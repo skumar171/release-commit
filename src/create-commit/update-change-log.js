@@ -14,7 +14,9 @@ module.exports = updateChangeLog;
 // implementation
 function updateChangeLog(options) {
   return when.promise(function (resolve, reject) {
-    var config = {};
+    var config = {
+      exclude: ['chore', 'style']
+    };
     var readFile = path.join(options.directory, 'CHANGELOG.md');
     var writeFile = path.join(options.directory, '.CHANGELOG.md');
     var writeStream = fs.createWriteStream(writeFile);
