@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "2.0.0",
+    "eslint": "3.19.0",
     "xo": "0.17.1"
   },
   "homepage": "https://github.com/JamieMason/commit-release",
