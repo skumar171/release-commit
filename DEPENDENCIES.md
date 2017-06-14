@@ -25,6 +25,8 @@ npm install commit-release --save
 
 ## Dev Dependencies
 
+- [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog): Commitizen adapter following the conventional-changelog format.
+- [eslint](https://github.com/eslint/eslint): An AST-based pattern checker for JavaScript.
 - [xo](https://github.com/sindresorhus/xo): JavaScript happiness style linter ❤️
 
 

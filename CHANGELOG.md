@@ -1,3 +1,9 @@
+### 0.9.0 (2017-6-14)
+
+##### New Features
+
+* **update-change-log:** exclude `chore` and `style` commits ([35827e68](https://github.com/JamieMason/commit-release/commit/35827e6841f7b7f8dbcf10194974bb7b4c01ce28))
+
 ### 0.8.0 (2017-3-28)
 
 ##### New Features
