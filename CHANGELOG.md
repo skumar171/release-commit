@@ -1,3 +1,9 @@
+## 1.0.0 (2017-6-15)
+
+##### New Features
+
+* **npm:** create separate npm module ([3f464172](https://github.com/tvardy/release-commit/commit/3f4641724bd74adf2e736290426767c4c92e7f99))
+
 ### 0.9.0 (2017-6-14)
 
 ##### New Features

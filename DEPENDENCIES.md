@@ -1,13 +1,13 @@
-# commit-release 
+# release-commit 
 
-Commit and tag a release for a conventional changelog project.
+Commit (and tag) a release with automatic CHANGELOG.md and DEPENDENCIES.md updates
 
 ## Installation
 
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install commit-release --save
+npm install release-commit --save
 ```
 
 
