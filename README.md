@@ -1,8 +1,8 @@
-# commit-release
+# release-commit
 
-[![Analytics](https://ga-beacon.appspot.com/UA-45466560-5/commit-release?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
+This is a fork and re-work of [commit-release](https://www.npmjs.com/package/commit-release) (by [Jamie Mason](https://www.npmjs.com/~fold_left))
 
-Commit and tag a release for a conventional changelog project.
+When run it updates CHANGELOG.md and DEPENDENCIES.md files, bumps version number in `package.json` and (optionally) tags the commit.
 
 ## Install
 
@@ -13,7 +13,7 @@ npm i -g commit-release
 or
 
 ```shell
-npm i --save-dev commit-release
+npm i --D commit-release
 ```
 
 (depending on your preferences)
@@ -21,17 +21,16 @@ npm i --save-dev commit-release
 ## Usage
 
 ```shell
-$ commit-release --help
+$ release-commit --help
 
-  Usage: index [options]
+  Usage: release-commit [options]
 
   Options:
-
-    -h, --help                output usage information
-    -b, --bump                use "conventional-recommended-bump"
-    -f, --force               overwrite tag if it exists already
-    -n, --no-verify           skip git commit hooks
-    -o, --override [version]  override recommended version number
-    -p, --postfix [name]      a postfix such as "rc1", "canary" or "beta1"
-    -t, --no-tag              skip tagging the commit
+  
+      -h, --help                output usage information
+      -f, --force               overwrite tag if it exists already
+      -n, --no-verify           skip git commit hooks
+      -o, --override [version]  override recommended version number
+      -p, --postfix [name]      a postfix such as "rc1", "canary" or "beta1"
+      -t, --tag                 also tag the commit
 ```

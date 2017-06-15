@@ -1,13 +1,13 @@
 {
-  "name": "commit-release",
-  "description": "Commit and tag a release for a conventional changelog project.",
+  "name": "release-commit",
+  "description": "Commit (and tag) a release with automatic CHANGELOG.md and DEPENDENCIES.md updates",
   "version": "0.7.0",
-  "author": "Jamie Mason (https://github.com/JamieMason)",
+  "contributors": [
+    "Greg Twardowski (https://github.com/tvardy)",
+    "Jamie Mason (https://github.com/JamieMason)"
+  ],
   "bin": {
     "commit-release": "./index.js"
-  },
-  "bugs": {
-    "url": "https://github.com/JamieMason/commit-release/issues"
   },
   "dependencies": {
     "chalk": "1.1.3",
@@ -24,10 +24,11 @@
     "eslint": "3.19.0",
     "xo": "0.17.1"
   },
-  "homepage": "https://github.com/JamieMason/commit-release",
-  "issues": "https://github.com/JamieMason/commit-release/issues",
+  "issues": "https://github.com/tvardy/release-commit/issues",
   "keywords": [
     "changelog",
+    "dependencies",
+    "generate",
     "commit",
     "deploy",
     "git",
@@ -39,7 +40,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/JamieMason/commit-release.git"
+    "url": "git://github.com/tvardy/release-commit.git"
   },
   "scripts": {
     "lint": "xo --fix"
