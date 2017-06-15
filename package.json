@@ -7,7 +7,7 @@
     "Jamie Mason (https://github.com/JamieMason)"
   ],
   "bin": {
-    "commit-release": "./index.js"
+    "release-commit": "./index.js"
   },
   "dependencies": {
     "chalk": "1.1.3",
