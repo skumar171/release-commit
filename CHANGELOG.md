@@ -1,3 +1,9 @@
+#### 1.0.1 (2017-06-25)
+
+##### Build System / Dependencies
+
+* **npm:** update `generate-changelog` dep version ([0344688f](https://github.com/tvardy/release-commit/commit/0344688fe660f12d3babb4d1d5ff9f1e7d13de50))
+
 ## 1.0.0 (2017-6-15)
 
 ##### New Features
