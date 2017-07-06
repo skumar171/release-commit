@@ -1,3 +1,13 @@
+#### 1.0.2 (2017-07-06)
+
+##### Build System / Dependencies
+
+* update dependencies ([207469bb](https://github.com/tvardy/release-commit/commit/207469bb585d651f40b7f11fd9068633a716a90b))
+
+##### Documentation Changes
+
+* update README.md ([05144b37](https://github.com/tvardy/release-commit/commit/05144b37fb71cdeef44b92e08260da3fe446d5d2))
+
 #### 1.0.1 (2017-06-25)
 
 ##### Build System / Dependencies
