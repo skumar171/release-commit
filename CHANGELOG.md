@@ -1,3 +1,12 @@
+#### 1.0.3 (2017-12-19)
+
+##### Build System / Dependencies
+
+* **npm:**
+  *  add `npm run release` script ([a33121fb](https://github.com/tvardy/release-commit/commit/a33121fb11af7ca9f6532ad973471077013ae985))
+  *  accept major bump changes in dependencies ([1da2ae13](https://github.com/tvardy/release-commit/commit/1da2ae134ce4c97be095cfd616da6b59ee402e17))
+  *  update safe dependencies ([e68b9ec3](https://github.com/tvardy/release-commit/commit/e68b9ec3852089ba49478b1287668d7ff6ea51fb))
+
 #### 1.0.2 (2017-07-06)
 
 ##### Build System / Dependencies

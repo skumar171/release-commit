@@ -1,7 +1,7 @@
 {
   "name": "release-commit",
   "description": "Commit (and tag) a release with automatic CHANGELOG.md and DEPENDENCIES.md updates",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Greg Twardowski (https://github.com/tvardy)",
   "bin": {
     "release-commit": "./index.js"
