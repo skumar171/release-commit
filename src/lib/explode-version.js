@@ -1,10 +1,10 @@
-// definitions
+// Definitions
 var levels = ['major', 'minor', 'patch', 'postfix'];
 
-// public
+// Public
 module.exports = explodeVersion;
 
-// implementation
+// Implementation
 function explodeVersion(str) {
   return str.split('.')
     .reduce(assignLevel, {});

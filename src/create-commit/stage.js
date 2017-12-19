@@ -1,10 +1,10 @@
-// modules
+// Modules
 var childProcess = require('../lib/child-process');
 
-// public
+// Public
 module.exports = stage;
 
-// implementation
+// Implementation
 function stage(options) {
   return childProcess.exec('git add . -A').then(function () {
     return options;

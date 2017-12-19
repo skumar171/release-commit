@@ -1,11 +1,11 @@
-// modules
+// Modules
 var createCommit = require('./create-commit');
 var getVersion = require('./get-version');
 
-// public
+// Public
 module.exports = commitRelease;
 
-// implementation
+// Implementation
 function commitRelease(options, done) {
   getVersion(options)
     .then(createCommit)

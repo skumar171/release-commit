@@ -4,10 +4,10 @@
 var chalk = require('chalk');
 var program = require('commander');
 
-// modules
+// Modules
 var commitRelease = require('./src/commit-release');
 
-// implementation
+// Implementation
 program
   .option('-f, --force', 'overwrite tag if it exists already')
   .option('-n, --no-verify', 'skip git commit hooks')

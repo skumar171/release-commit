@@ -1,10 +1,10 @@
-// modules
+// Modules
 var childProcess = require('../lib/child-process');
 
-// public
+// Public
 module.exports = bump;
 
-// implementation
+// Implementation
 function bump(options) {
   return childProcess
     .exec('npm version ' + options.version + ' --no-git-tag-version --force')

@@ -1,14 +1,14 @@
-// modules
+// Modules
 var bump = require('conventional-recommended-bump');
 var when = require('when');
 var getCurrentVersion = require('../lib/get-current-version');
 
-// public
+// Public
 module.exports = {
   get: get
 };
 
-// implementation
+// Implementation
 function get(options, done) {
   var currentVersion = getCurrentVersion(options.directory);
   var postfix = getPostfix();

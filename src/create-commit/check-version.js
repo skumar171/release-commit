@@ -1,13 +1,13 @@
-// node modules
+// Node modules
 var path = require('path');
 
 // 3rd party modules
 var when = require('when');
 
-// public
+// Public
 module.exports = checkVersion;
 
-// implementation
+// Implementation
 function checkVersion(options) {
   return when.promise(function (resolve, reject) {
     var pkgPath = path.resolve(options.directory, 'package.json');

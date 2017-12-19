@@ -1,13 +1,13 @@
 // 3rd party modules
 var when = require('when');
 
-// modules
+// Modules
 var childProcess = require('./lib/child-process');
 
-// public
+// Public
 module.exports = checkTagExists;
 
-// implementation
+// Implementation
 function checkTagExists(options) {
   if (options.noTag || options.force) {
     return when.resolve(options);

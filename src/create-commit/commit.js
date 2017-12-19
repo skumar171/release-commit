@@ -1,10 +1,10 @@
-// modules
+// Modules
 var childProcess = require('../lib/child-process');
 
-// public
+// Public
 module.exports = commit;
 
-// implementation
+// Implementation
 function commit(options) {
   var baseArgs = ['commit', '-m', 'chore(release): ' + options.version];
   var args = options.noVerify ? baseArgs.concat('--no-verify') : baseArgs;

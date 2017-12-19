@@ -1,10 +1,10 @@
-// modules
+// Modules
 var explodeVersion = require('./explode-version');
 
-// public
+// Public
 module.exports = getCurrentVersion;
 
-// implementation
+// Implementation
 function getCurrentVersion(dir) {
   // eslint-disable-next-line import/no-dynamic-require
   return explodeVersion(require(dir + '/package.json').version);

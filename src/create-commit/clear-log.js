@@ -1,13 +1,13 @@
-// node modules
+// Node modules
 var path = require('path');
 
-// modules
+// Modules
 var childProcess = require('../lib/child-process');
 
-// public
+// Public
 module.exports = clearLog;
 
-// implementation
+// Implementation
 function clearLog(options) {
   return childProcess.exec('rm -f ' + path.resolve(options.directory, 'CHANGELOG.md'))
     .then(function () {

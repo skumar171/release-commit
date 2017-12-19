@@ -1,17 +1,17 @@
-// node modules
+// Node modules
 var path = require('path');
 
 // 3rd party modules
 var changelog = require('generate-changelog');
 var when = require('when');
 
-// modules
+// Modules
 var fs = require('../lib/fs');
 
-// public
+// Public
 module.exports = updateChangeLog;
 
-// implementation
+// Implementation
 function updateChangeLog(options) {
   return when.promise(function (resolve, reject) {
     var config = {

@@ -4,10 +4,10 @@ var explodeVersion = require('../lib/explode-version');
 var getCurrentVersion = require('../lib/get-current-version');
 var bump = require('./bump');
 
-// public
+// Public
 module.exports = getVersion;
 
-// implementation
+// Implementation
 function getVersion(options) {
   if (options.overrideVersion) {
     var newVersion;

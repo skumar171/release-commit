@@ -1,4 +1,4 @@
-// modules
+// Modules
 var bump = require('./bump');
 var checkVersion = require('./check-version');
 var commit = require('./commit');
@@ -7,10 +7,10 @@ var tag = require('./tag');
 var updateChangeLog = require('./update-change-log');
 var updateDependencyLog = require('./update-dependency-log');
 
-// public
+// Public
 module.exports = createCommit;
 
-// implementation
+// Implementation
 function createCommit(options) {
   return checkVersion(options)
     .then(bump)
