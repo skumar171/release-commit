@@ -39,6 +39,7 @@
     "url": "git://github.com/tvardy/release-commit.git"
   },
   "scripts": {
+    "release": "node index -t",
     "lint": "xo --fix"
   },
   "xo": {
